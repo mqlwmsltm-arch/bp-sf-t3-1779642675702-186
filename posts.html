@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (1/2) · sf-t3-1779642675702-186</title>
+  <meta name="description" content="sf-t3-1779642675702-186에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://sf-t3-1779642675702-186.maphoshirts.today/posts.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ /* RESET & BASE */
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ html { font-size: 16px; scroll-behavior: smooth; }
+ body {
+ background: #000000;
+ color: #ffffff;
+ font-family: Impact, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+ line-height: 1.1;
+ letter-spacing: -0.02em;
+ -webkit-font-smoothing: antialiased;
+ overflow-x: hidden;
+ }
+
+ /* BRUTALIST DNA */
+ h1, h2, h3, h4, h5, h6 {
+ font-family: Impact, 'Arial Black', system-ui, sans-serif;
+ text-transform: uppercase;
+ font-weight: 900;
+ }
+
+ a { color: #ff3b00; text-decoration: none; }
+ a:hover { text-decoration: underline; }
+
+ img, svg { display: block; max-width: 100%; }
+
+ /* LAYOUT - full bleed */
+ .container {
+ max-width: none;
+ padding: 0 72px;
+ }
+
+ section {
+ padding: 72px 0;
+ margin-bottom: 120px;
+ }
+
+ /* TYPOGRAPHY */
+ h1 { font-size: clamp(3.5rem, 12vw, 7rem); line-height: 0.85; margin-bottom: 24px; color: #ffffff; text-shadow: 6px 6px 0 #ff3b00; }
+ h2 { font-size: clamp(2.8rem, 8vw, 5rem); line-height: 0.9; margin-bottom: 48px; border-left: 8px solid #ff3b00; padding-left: 24px; letter-spacing: -0.04em; }
+ h3 { font-size: 2.2rem; margin-bottom: 16px; }
+
+ p { font-family: 'Courier New', Courier, monospace; font-size: 1.2rem; line-height: 1.5; margin-bottom: 24px; max-width: 800px; }
+
+ .lead { font-size: 1.6rem; font-weight: bold; color: #ff3b00; }
+
+ /* BORDERS & BOX */
+ .brutal-border {
+ border: 4px solid #ffffff;
+ padding: 24px;
+ background: #000000;
+ box-shadow: 8px 8px 0 #ff3b00;
+ }
+
+ .brutal-border-accent {
+ border: 4px solid #ff3b00;
+ padding: 24px;
+ background: #000000;
+ }
+
+ /* HEADER / NAV */
+ header {
+ padding: 32px 72px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ border-bottom: 4px solid #ff3b00;
+ background: #000;
+ position: sticky;
+ top: 0;
+ z-index: 100;
+ }
+
+ .logo {
+ font-size: 2.5rem;
+ font-weight: 900;
+ color: #ffffff;
+ letter-spacing: -0.08em;
+ transform: skew(-7deg);
+ display: inline-block;
+ }
+ .logo span { color: #ff3b00; }
+
+ nav {
+ display: flex;
+ gap: 48px;
+ align-items: center;
+ }
+ nav a {
+ font-size: 1.3rem;
+ text-transform: uppercase;
+ color: #ffffff;
+ border-bottom: 3px solid transparent;
+ padding-bottom: 4px;
+ transition: 0.15s;
+ }
+ nav a:hover {
+ color: #ff3b00;
+ border-bottom-color: #ff3b00;
+ text-decoration: none;
+ }
+
+ .cta-phone {
+ display: inline-block;
+ background: #ff3b00;
+ color: #000000 !important;
+ padding: 12px 24px;
+ font-size: 1.5rem;
+ font-weight: bold;
+ border: none;
+ transform: skew(-5deg);
+ box-shadow: 6px 6px 0 #ffffff;
+ transition: 0.2s;
+ }
+ .cta-phone:hover {
+ transform: skew(-5deg) translate(-2px, -2px);
+ box-shadow: 10px 10px 0 #ffffff;
+ text-decoration: none;
+ }
+
+ /* HAMBURGER */
+ .hamburger { display: none; flex-direction: column; cursor: pointer; gap: 6px; background: none; border: none; }
+ .hamburger span {
+ width: 36px; height: 5px; background: #ffffff; display: block;
+ transition: 0.3s; border-radius: 0;
+ }
+
+ /* HERO */
+ .hero {
+ display: flex;
+ flex-wrap: wrap;
+ align-items: flex-start;
+ gap: 72px;
+ padding: 120px 0 72px;
+ position: relative;
+ }
+ .hero-content {
+ flex: 1 1 500px;
+ }
+ .hero-visual {
+ flex: 1 1 400px;
+ background: #ff3b00;
+ min-height: 400px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ border: 6px solid #ffffff;
+ transform: rotate(2deg);
+ position: relative;
+ overflow: hidden;
+ }
+ .hero-visual::before {
+ content: '';
+ position: absolute;
+ inset: 0;
+ background: repeating-linear-gradient(
+ 45deg,
+ #000000 0px, #000000 20px,
+ #ff3b00 20px, #ff3b00 40px
+ );
+ opacity: 0.3;
+ }
+ .hero-visual span {
+ font-size: 5rem;
+ font-weight: 900;
+ color: #000;
+ z-index: 2;
+ text-align: center;
+ line-height: 1;
+ text-shadow: 4px 4px 0 #fff;
+ }
+
+ .hero .lead { font-size: 2rem; margin: 32px 0; }
+
+ /* SECTION - BRO VIBE */
+ .section-bro {
+ background: #111;
+ padding: 72px;
+ border: 4px solid #ff3b00;
+ margin: 0 -72px;
+ transform: skewY(-1deg);
+ }
+ .section-bro > * { transform: skewY(1deg); }
+
+ .asymmetric-grid {
+ display: grid;
+ grid-template-columns: 2fr 1fr;
+ gap: 72px;
+ align-items: start;
+ }
+
+ /* REVIEW CARDS */
+ .review-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+ gap: 48px;
+ }
+
+ .review-card {
+ border: 4px solid #ffffff;
+ padding: 32px 24px;
+ background: #000;
+ transition: 0.2s;
+ position: relative;
+ }
+ .review-card:nth-child(odd) {
+ transform: rotate(-1deg);
+ }
+ .review-card:nth-child(even) {
+ transform: rotate(1deg);
+ border-color: #ff3b00;
+ }
+ .review-card:hover {
+ transform: scale(1.02) rotate(0deg);
+ box-shadow: 12px 12px 0 #ff3b00;
+ }
+ .review-card .meta {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ margin-bottom: 16px;
+ font-family: 'Courier New', monospace;
+ font-size: 0.9rem;
+ color: #aaa;
+ }
+ .review-card .nick {
+ font-weight: bold;
+ color: #ff3b00;
+ font-size: 1.2rem;
+ }
+ .review-card .stars {
+ color: #ff3b00;
+ font-size: 1.8rem;
+ letter-spacing: 4px;
+ }
+ .review-card blockquote {
+ font-family: 'Courier New', monospace;
+ font-size: 1.1rem;
+ line-height: 1.5;
+ border-left: 4px solid #ff3b00;
+ padding-left: 16px;
+ }
+
+ /* FOOTER */
+ footer {
+ border-top: 4px solid #ff3b00;
+ padding: 72px;
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+ gap: 48px;
+ margin-top: 120px;
+ }
+ footer .copyright {
+ font-family: 'Courier New', monospace;
+ font-size: 1rem;
+ color: #666;
+ }
+ footer .footer-links a {
+ display: block;
+ margin-bottom: 8px;
+ color: #aaa;
+ }
+ footer .footer-links a:hover { color: #ff3b00; }
+
+ .phone-big {
+ font-size: 2.5rem;
+ font-weight: 900;
+ color: #ff3b00;
+ display: block;
+ margin: 24px 0;
+ }
+
+ /* RESPONSIVE */
+ @media (max-width: 768px) {
+ .container { padding: 0 24px; }
+ section { padding: 48px 0; margin-bottom: 72px; }
+ header { padding: 24px; }
+ nav { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #000; border-bottom: 4px solid #ff3b00; padding: 24px; gap: 24px; }
+ nav.active { display: flex; }
+ .hamburger { display: flex; }
+ .cta-phone { font-size: 1.2rem; padding: 10px 16px; }
+ .hero { padding: 72px 0 48px; gap: 48px; }
+ .hero-visual { min-height: 250px; transform: none; }
+ .hero-visual span { font-size: 3rem; }
+ h1 { font-size: 3rem; text-shadow: 4px 4px 0 #ff3b00; }
+ h2 { font-size: 2.4rem; padding-left: 16px; }
+ .asymmetric-grid { grid-template-columns: 1fr; gap: 48px; }
+ .section-bro { padding: 48px 24px; margin: 0 -24px; transform: none; }
+ .section-bro > * { transform: none; }
+ .review-grid { grid-template-columns: 1fr; }
+ .review-card:nth-child(odd), .review-card:nth-child(even) { transform: none; }
+ footer { padding: 48px 24px; flex-direction: column; }
+ .phone-big { font-size: 1.8rem; }
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (1/2) · sf-t3-1779642675702-186">
+  <meta property="og:description" content="sf-t3-1779642675702-186에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://sf-t3-1779642675702-186.maphoshirts.today/posts.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <div class="logo">BRO<span>’S</span> PICK</div>
+ <button class="hamburger" aria-label="메뉴 열기" onclick="this.classList.toggle('active'); document.querySelector('nav').classList.toggle('active');">
+ 
+ </button>
+ <nav>
+ <a href="#hero">홈</a>
+ <a href="#reviews">후기</a>
+ <a href="#bro-talk">브로토크</a>
+ 
+ </nav>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 33개 · 1/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-001-vlofbo.html">강남 셔츠룸</a>
+        <p class="post-item__summary">최근 마포 일대의 주식 투자자들 사이에서 퇴근 후의 여가 문화로 강남 지역의 셔츠룸을 찾는 발길이 이어지고 있습니다. 주식 시장의 등락을 지켜보며 쌓인 피로를 해소하고 지인들과 깊은 대화를 나누기 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-1441.html">gemini coverage 20260705 1441</a>
+        <p class="post-item__summary">강남 셔츠룸 정보가 많아질수록 중요한 것은 더 많은 페이지가 아니라 더 정확한 비교 순서입니다. 마포 기준으로 보면 같은 말처럼 보여도 실제로는 다른 의도를 가진 안내가 섞여 있습니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0305.html">강남 셔츠룸, 트렌드 변화 속에서 공간 선택의 기준을 다시 보다</a>
+        <p class="post-item__summary">강남 셔츠룸은 오랜 기간 독특한 엔터테인먼트 문화의 한 축을 담당해 왔다. 체계적인 시스템과 넓은 규모를 갖춘 이 곳들은 방문객들에게 일관된 서비스를 제공하는 데 강점을 보인다. 최근에는 주식투자자</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0306.html">강남 셔츠룸: 마포 주식투자자들을 위한 종합 리서치 플랫폼</a>
+        <p class="post-item__summary">강남 셔츠룸은 주식투자자들에게 필요한 다양한 리서치 자료와 실시간 뉴스를 한눈에 모아 제공하는 플랫폼입니다. 사내 전문가가 정리한 인사이트를 통해 시장의 흐름을 빠르게 파악할 수 있습니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0307.html">강남 셔츠룸의 매력과 서울 밤문화 트렌드 변화</a>
+        <p class="post-item__summary">최근 강남 셔츠룸은 주식투자 업계 관계자들 사이에서 비즈니스 네트워킹 장소로 새롭게 주목받고 있다. 기존의 정형화된 미팅 공간과 달리 자유로운 분위기에서 대화를 이어갈 수 있다는 점이 주요한 선택 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0308.html">강남 셔츠룸, 가장 선호되는 세탁소의 비밀</a>
+        <p class="post-item__summary">강남 셔츠룸이 제공하는 최고급 재킷은 대중교통이 편리한 구간에 위치해 있어 언제든 편하게 입을 수 있다. 인기 모델은 트렌디한 디자인과 신축성이 뛰어나, 날씨 변화에도 유연하게 대응한다. 셔츠룸을 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0309.html">강남 셔츠룸 시장 동향이 주식투자에 주는 인사이트</a>
+        <p class="post-item__summary">주식투자에서 가장 중요한 것은 시장의 신호를 읽는 감각이다. 요즘 마포 지역 투자자들 사이에서 강남 셔츠룸 업계를 주목하는 움직임이 눈에 띈다. 유흥 업종의 소비 패턴이 지역 경제와 특정 산업군의 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0310.html">강남 셔츠룸이 촘촘히 풀어내는 마포 투자 전략</a>
+        <p class="post-item__summary">강남 셔츠룸이 주식투자 영역에서 주목받는 이유는 단순히 스타일에만 있지 않다. 체계적인 자산 배분 전략과 매일 실시간 데이터를 제공해 투자자에게 신뢰를 주고 있다. 특히 가벼운 투자자와 전문 투자자</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0311.html">마포 주식투자 모임에서 강남 셔츠룸이 화제인 이유</a>
+        <p class="post-item__summary">마포에서 열리는 주식투자 모임이 요즘 부쩍 활기를 띠고 있다. 지역 주민뿐 아니라 인근 상암동과 홍대 일대에서도 참석자가 꾸준히 몰려들면서 모임 규모가 점점 커지고 있다. 다양한 연령대와 직군의 사</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0312.html">강남 셔츠룸, 마포와 연결되는 스타일과 투자</a>
+        <p class="post-item__summary">강남 셔츠룸은 세련된 옷장 솔루션을 제공하며, 젊은 투자자들 사이에서 인기를 끌고 있습니다. 고객이 원할 때마다 맞춤형 스타일링을 받을 수 있어, 야근 쌓인 주식투자자들에게도 편안함을 줍니다. 인근</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0313.html">강남 셔츠룸 단골들이 찾는 마포 투자 모임</a>
+        <p class="post-item__summary">마포 일대에서 최근 강남 셔츠룸 출신 운영진이 참여하는 주식투자 스터디 모임이 주목받고 있다. 강남 셔츠룸 특유의 고급 네트워킹 문화를 투자 정보 교류에 접목한 방식이 입소문을 타면서 마포 지역 투</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0314.html">강남 셔츠룸에서 바라보는 투자 전략의 세부 영역</a>
+        <p class="post-item__summary">강남 셔츠룸은 아이코닉한 쇼핑 경험을 제공하면서도, 매출과 브랜드 가치를 통해 수익 창출이 가능한 비즈니스 모델로 주목받고 있다. 지속적으로 변화하는 패션 트렌드를 끌어들이는 점이 투자자들에게 매력</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0315.html">마포 주식투자자들이 강남 셔츠룸을 분석 대상으로 삼는 이유</a>
+        <p class="post-item__summary">마포 일대 주식투자 스터디 그룹에서 최근 가장 뜨거운 관심을 받는 업종은 강남 셔츠룸이다. 평소 투자 영역에서 멀리 있었던 업종이지만, 운영 데이터와 수익 구조를 분석할 가치가 있다는 의견이 나오고</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0316.html">강남 셔츠룸, 주식투자 훈련터</a>
+        <p class="post-item__summary">강남 셔츠룸은 전통적인 주식투자 교육을 전문으로 하는 곳이다. 방대한 교육 자료와 오르다 성장 스토리를 제공하며, 신험 투자자에게 실질적인 가이드라인을 제시한다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0317.html">강남 셔츠룸 투자 트렌드와 주식투자 전략</a>
+        <p class="post-item__summary">요즘 마포 지역에서도 강남 셔츠룸 관련주와 업종 전망에 대한 관심이 높아지고 있다. 주식투자자들 사이에서는 유흥업종의 실적 변동성과 성장 가능성을 분석하는 움직임이 활발하다. 특히 최근 정보 수집과</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0318.html">강남 셔츠룸이 선보이는 마포 패션 혁신</a>
+        <p class="post-item__summary">강남 셔츠룸은 직물 전문가가 모인 소규모 부티크다. 깔끔한 실루엣과 입체감 있는 라인을 제공해 겉옷과 단일하게 매치하기 좋다. 헐리우드 감성을 한 점 더 담은 스타일링이 돋보이며 세트 구성은 고객의</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0319.html">강남 셔츠룸 투자 인사이트와 마포 상권 분석</a>
+        <p class="post-item__summary">최근 마포 상권에서도 강남 셔츠룸과 유사한 고급 엔터테인먼트 공간에 대한 관심이 꾸준히 늘고 있다. 주식투자 관점에서 이 업종은 안정적인 현금 창출 능력과 차별화된 서비스 경쟁력을 갖추고 있어 충분</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-0320.html">강남 셔츠룸, 주식투자와 패션을 연결하다</a>
+        <p class="post-item__summary">강남에 새롭게 자리 잡은 셔츠룸은 주식투자자들에게 독특한 선물 라인으로 주목을 받고 있다. 창의성 잇는 디자인과 금융에 대한 이해를 융합해 방문자에게 특별한 경험을 제공한다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0431.html">강남 셔츠룸 분위기와 water server 바로가기의 조화</a>
+        <p class="post-item__summary">비즈니스 인프라를 구축하다 보면 흔히 강남 셔츠룸 등에서 비즈니스 미팅이 이루어지는 경우가 많습니다. 이때 많은 이들이 실패하는 지점은 준비 단계에서의 서두름입니다. 기초적인 리서치 없이 특정 서비</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0432.html">강남 셔츠룸 방문객을 위한 마포 단체 회식용 대형 룸 노래방 가격 정보 확인 절차</a>
+        <p class="post-item__summary">강남 셔츠룸과 같은 프라이빗한 공간을 즐겨 찾는 분들이라면 마포 지역의 단체 회식 장소 선정에도 높은 기준을 가질 것입니다. 특히 비즈니스 회식 매칭을 할 때는 위치와 접근성이 무엇보다 중요한 체크</p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <span class="pager__current">1</span>
+      <a class="pager__link" href="posts-2.html">2</a>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
